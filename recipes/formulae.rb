@@ -2,6 +2,11 @@
 # to install (e.g. pstree, htop)
 include_recipe 'homebrew'
 
+ENV['HOMEBREW_PREFIX'] = `brew --prefix`.chomp
+ENV['HOMEBREW_REPOSITORY'] = ENV['HOMEBREW_PREFIX']
+ENV['HOMEBREW_LIBRARY'] = File.join(ENV['HOMEBREW_REPOSITORY'], 'Library')
+ENV['HOMEBREW_CELLAR'] = File.join(ENV['HOMEBREW_PREFIX'], 'Cellar')
+
 node['sprout']['homebrew']['formulae'].each do |formula|
   Chef::Log.warn("Doing homebrew formula #{formula}")
 
