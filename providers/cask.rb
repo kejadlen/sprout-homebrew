@@ -1,5 +1,4 @@
 action :install do
-  run_context.include_recipe 'sprout-homebrew::cask'
   package = new_resource.name
 
   execute "brew cask install #{package}" do

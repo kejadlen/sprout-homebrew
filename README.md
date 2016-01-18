@@ -42,7 +42,6 @@ bundle exec soloist
 1. `sprout-homebrew`
 1. `sprout-homebrew::formulae`
 1. `sprout-homebrew::casks`
-1. `sprout-homebrew::casks`
 1. `sprout-homebrew::launchctl`
 
 ## Contributing
